@@ -1,8 +1,8 @@
 class CreateContacts < ActiveRecord::Migration[5.2]
   def change
     create_table :contacts do |t|
-      t.string :firstName
-      t.integer :lastName
+      t.string :firstname
+      t.integer :lastname
       t.string :email
       t.string :company
 

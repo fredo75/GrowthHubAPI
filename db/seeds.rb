@@ -8,11 +8,11 @@
 puts 'Creating 10 leads...'
 10.times do |i|
   contact = Contact.create!(
-    firstName: Faker::FunnyName.name,
-    lastName: Faker::Name.name,
+    firstname: Faker::FunnyName.name,
+    lastname: Faker::Name.name,
     email: Faker::Internet.email,
     company: Faker::Company.name
   )
-  puts "#{i + 1}. #{contact.firstName}"
+  puts "#{i + 1}. #{contact.firstname}"
 end
 puts 'Finished!'

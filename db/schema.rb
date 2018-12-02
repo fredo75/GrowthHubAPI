@@ -16,8 +16,8 @@ ActiveRecord::Schema.define(version: 2018_12_02_010011) do
   enable_extension "plpgsql"
 
   create_table "contacts", force: :cascade do |t|
-    t.string "firstName"
-    t.integer "lastName"
+    t.string "firstname"
+    t.integer "lastname"
     t.string "email"
     t.string "company"
     t.datetime "created_at", null: false
