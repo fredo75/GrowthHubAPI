@@ -1,18 +1,20 @@
-<h1>Mon contact</h1>
+<div class="class container">
+  <h1>Mon contact</h1>
 
-<p><%=@contact.firstname%></p>
-<p><%= @contact.lastname %></p>
-<li><%= @contact.email %></li>
-<li><%= @contact.company %></li>
+  <p><%=@contact.firstname%></p>
+  <p><%= @contact.lastname %></p>
+  <li><%= @contact.email %></li>
+  <li><%= @contact.company %></li>
 
 
 
 
-<!--
-  ##################################################################
-      ##################### PHANTOM BUSTER #############################
-            ################################################################## -->
+  <!--
+    ##################################################################
+        ##################### PHANTOM BUSTER #############################
+              ################################################################## -->
 
-<a  class= btn btn-success href="#" >Go</a>
+  <a  class= btn btn-success href="#" >Go</a>
 
-<p> <%= link_to "back", contacts_path %> </p>
+  <p> <%= link_to "back", contacts_path %> </p>
+</div>

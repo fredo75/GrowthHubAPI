@@ -9,7 +9,6 @@ gem 'rails', '5.2.1'
 gem 'redis'
 
 gem 'autoprefixer-rails'
-gem 'bootstrap-sass', '~> 3.3'
 gem 'font-awesome-sass', '~> 5.0.9'
 gem 'sassc-rails'
 gem 'simple_form'
@@ -19,6 +18,10 @@ gem 'simple_hubspot'
 gem 'faker'
 gem 'better_errors'
 gem 'binding_of_caller'
+gem 'bootstrap', '~> 4.0.0'
+gem 'sprockets-rails'
+gem 'jquery-rails'
+gem 'popper_js', '~> 1.9', '>= 1.9.9'
 
 group :development do
   gem 'web-console', '>= 3.3.0'
