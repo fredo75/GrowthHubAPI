@@ -11,6 +11,21 @@ require 'simple_hubspot'
   def index
     @contacts = Contact.all
 
+    body = RestClient.get "https://phantombuster.com/api/v1/agent/31385/output?&key=#{ENV["PHANTHOM_BUSTER_API_KEY"]}"
+    @phantombuster_callback = JSON.parse(body)
+    @phantombuster_callback = @phantombuster_callback["data"]["resultObject"]
+
+    @results = []
+
+    @phantombuster_callback.map do |element|
+      @results << element["fullName"]
+    end
+  end
+    # raise
+
+    # p repos
+# PH_KEY=PuzLoIgb0mCaokfWEc51aRpqQvm1nuab
+
 
     # @contactshub = SimpleHubspot::Contact.find_by_email "coolrobot@hubspot.com"
     # @contactshub = SimpleHubspot::Contact.create_or_update "coort@hubspot.com", { firstname: "#{params[:contact][:firstname]}", lastname: "#{params[:contact][:lastname]}", company: "#{params[:contact][:company]}" }
@@ -43,16 +58,16 @@ require 'simple_hubspot'
 
     # url = URI("https://phantombuster.com/api/v1/user?&key=PuzLoIgb0mCaokfWEc51aRpqQvm1nuab")
 
-   url = URI("https://phantombuster.com/api/v1/agent/31385/output?&key=PuzLoIgb0mCaokfWEc51aRpqQvm1nuab")
+   # url = URI("https://phantombuster.com/api/v1/agent/31385/output?&key=PuzLoIgb0mCaokfWEc51aRpqQvm1nuab")
 
-    http = Net::HTTP.new(url.host, url.port)
-    http.use_ssl = true
-    request = Net::HTTP::Get.new(url)
-    request["accept"] = 'application/json'
+   #  http = Net::HTTP.new(url.host, url.port)
+   #  http.use_ssl = true
+   #  request = Net::HTTP::Get.new(url)
+   #  request["accept"] = 'application/json'
 
-    @response = http.request(request)
-    @phantombuster_callback_json = JSON.parse(@response.read_body)
-    @phantombuster_callback = @phantombuster_callback_json["data"]["resultObject"]
+   #  @response = http.request(request)
+   #  @phantombuster_callback_json = JSON.parse(@response.read_body)
+    # @phantombuster_callback = @phantombuster_callback_json["data"]["resultObject"]
 
 
     # url_ph = URI(@phantombuster_callback)
@@ -69,7 +84,6 @@ require 'simple_hubspot'
 
 
 
-  end
 
 
   def show

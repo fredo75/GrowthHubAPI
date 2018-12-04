@@ -22,6 +22,7 @@ gem 'bootstrap', '~> 4.0.0'
 gem 'sprockets-rails'
 gem 'jquery-rails'
 gem 'popper_js', '~> 1.9', '>= 1.9.9'
+gem 'clearbit'
 
 group :development do
   gem 'web-console', '>= 3.3.0'

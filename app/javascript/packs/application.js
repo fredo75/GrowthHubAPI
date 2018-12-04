@@ -1,5 +1,5 @@
 import "bootstrap";
 
 
-import {testChart} from '../packs/charts';
-testChart();
+// import {testChart} from '../packs/charts';
+// testChart();

@@ -1,75 +1,19 @@
-<h1>Test API Contacts</h1>
-
-<%#= @contactshub %>
-
-
-<%# @contacts.each do |contact| %>
-<!--   <ul>
-    <li><%#= contact.firstname %></li>
-    <li><%#= contact.lastname %></li>
-    <li><%#= contact.email %></li>
-    <li><%#= contact.company %></li>
-  </ul> -->
-<%# end %>
-
 
 <!--
   ##################################################################
       ##################### PHANTOM BUSTER #############################
             ################################################################## -->
 
+<div class="class container">
+  <h1>Test API Contacts</h1>
+
+  <% @results.each do |element| %>
+
+    <li><%= element%></li>
+
+  <% end %>
+
+</div>
 
 
 
-
- <%# @phantombuster_callback.each do |key, value| %>
-
- <!--  <ul>
-    <li><%#= key["agents"] %></li>
-    <li><%#= value %></li>
-    <li><%#= contact.email %></li>
-    <li><%#= contact.company %></li>
-  </ul> -->
-<%# end %>
-
-
-
- <%# @phantombuster_callback["agents"].each do |key, value| %>
-
-<!--   <ul>
-    <li><%#= key %></li>
-    <li><%#= value %></li>
-    <li><%#= contact.email %></li>
-    <li><%#= contact.company %></li>
-  </ul>
-<%# end %> -->
-
-<%#=  @phantombuster_callback_parse_json  %>
-
-<%= @phantombuster_callback %>
-
-<p>@contactshub</p>
-
-<%#= @phantombuster_callback_parse_json.each do |lead| %>
-<!-- <ul>
-  <li><%#= lead["fullName"] %></li>
-  <li><%#= lead["headline"] %></li>
-</ul> -->
-<%# end %>
-
-
-      <div class="class container">
-<form>
-  <div class="row">
-    <div class="small-5">
-      <label for="username">Username
-        <input type="text" name="username" id="username">
-      </label>
-    </div>
-
-    <div class="small-5">
-      <label for="password">Password
-        <input type="password" name="password" id="password">
-      </label>
-    </div>
-  </div>
