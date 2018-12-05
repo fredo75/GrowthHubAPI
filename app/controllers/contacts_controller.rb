@@ -20,6 +20,7 @@ require 'simple_hubspot'
     @phantombuster_callback.map do |element|
       @results << element["fullName"]
     end
+   # @results_2 = RestClient.post "https://api.hubapi.com/contacts/v1/lists?hapikey=905e4bbe-74c4-4aa2-9f1d-f7de5d6f0031", {accept: :json}
   end
     # raise
 

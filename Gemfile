@@ -9,7 +9,7 @@ gem 'rails', '5.2.1'
 gem 'redis'
 
 gem 'autoprefixer-rails'
-gem 'font-awesome-sass', '~> 5.0.9'
+gem 'font-awesome-rails', '~> 4.6', '>= 4.6.3.1'
 gem 'sassc-rails'
 gem 'simple_form'
 gem 'uglifier'
@@ -18,12 +18,12 @@ gem 'simple_hubspot'
 gem 'faker'
 gem 'better_errors'
 gem 'binding_of_caller'
-gem 'bootstrap', '~> 4.0.0'
+gem 'bootstrap-sass', '~> 3.3'
 gem 'sprockets-rails'
 gem 'jquery-rails'
 gem 'popper_js', '~> 1.9', '>= 1.9.9'
 gem 'clearbit'
-
+gem 'jquery-datatables-rails', '~> 3.4'
 group :development do
   gem 'web-console', '>= 3.3.0'
 end
